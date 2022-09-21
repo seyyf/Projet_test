@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #072038;
+}
+
+@layer base {
+    html {
+      font-family: Proxima Nova, system-ui, sans-serif;
+      /* background-image: url("img/background-pattern.png") */
+    }
+  }
+
+@layer components{
+    .menu-list{
+        @apply text-white px-4 hover:cursor-pointer hover:text-blue-300;
+    }
+    .main-button{
+        @apply bg-blue-500 text-black rounded-3xl p-2 hover:bg-white hover:text-blue-500
+    }
+}
+
+.data{
+    color: #3b82f6;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #3b82f6;
+}
+
+.text-wrapper-animation{
+    animation: text-animation 5s linear infinite;
+}
+
+.text-wrapper-parent{
+    transform: rotate(-3deg);
+}
+
+@keyframes text-animation {
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-100%, 0);
+    }
+}
+
+.section{
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+.video-section{
+    background: linear-gradient(to left, rgba(7, 32, 56, 1), rgba(7, 32, 56, 1), rgba(7, 32, 56, 0)), url(./img/Casclient-Exki.jpeg) no-repeat top center;
+}
